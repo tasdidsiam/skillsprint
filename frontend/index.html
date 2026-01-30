@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSprint</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-[#0b0f19] text-[#eaf0ff] overflow-x-hidden relative light">
+
+<header class="fixed top-0 left-0 w-full z-50 bg-[#0b0f19]/75 backdrop-blur-xl border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <div class="flex items-center gap-3 cursor-pointer">
+      <img src="assets/images/logo.svg" alt="SkillSprint Logo" class="w-16 h-16 object-contain">
+      <span class="text-2xl font-black logo-hover">SkillSprint</span>
+    </div>
+    <nav class="hidden md:flex gap-8 items-center">
+      <a href="#" class="text-[#cfd6ff] hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">Home</a>
+      <a href="#" class="text-[#cfd6ff] hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">How It Works</a>
+      <a href="#" class="text-[#cfd6ff] hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">Features</a>
+      <a href="auth/login.html" class="text-[#cfd6ff] hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">Login</a>
+      <label class="relative inline-flex items-center cursor-pointer ml-4">
+        <input type="checkbox" id="darkModeToggle" class="sr-only peer" />
+        <div class="w-14 h-8 bg-gray-300 peer-checked:bg-gradient-to-r peer-checked:from-[#6a7cff] peer-checked:to-[#22d3ee] rounded-full transition-all duration-300"></div>
+        <span class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 peer-checked:translate-x-6"></span>
+      </label>
+    </nav>
+  </div>
+</header>
+
+<section class="min-h-screen pt-40 pb-24 px-6">
+  <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+    <div class="space-y-8">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight bg-gradient-to-r from-white via-[#6a7cff] to-[#22d3ee] text-transparent bg-clip-text">Micro Internships for<br>Real World Experience</h1>
+      <p class="text-lg text-[#cbd5ff] leading-relaxed max-w-xl">SkillSprint is a student-focused digital marketplace that connects students with companies, startups and professionals offering short-term, real-world tasks to build practical skills and professional portfolios.</p>
+      <div class="flex gap-4 flex-wrap">
+        <a href="signup.html"><button class="px-8 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(34,211,238,.35)]">Join as Student/Employee</button></a>
+        <button class="px-8 py-3.5 rounded-xl font-semibold border border-white/20 transition hover:bg-white/10">Post a Task</button>
+      </div>
+    </div>
+
+    <div class="bg-white/5 border border-white/10 rounded-3xl p-8 transition hover:-translate-y-3 hover:scale-[1.02] shadow-[0_30px_80px_rgba(0,0,0,.55)]">
+      <h3 class="text-xl font-semibold mb-6">Platform Overview</h3>
+      <div class="grid grid-cols-3 gap-4">
+        <div class="bg-white/5 rounded-xl p-4 text-center transition hover:bg-white/10 hover:-translate-y-1">
+          <h3 class="text-2xl font-bold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-transparent bg-clip-text">15K+</h3>
+          <p class="text-sm text-[#cbd5ff]">Students</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-4 text-center transition hover:bg-white/10 hover:-translate-y-1">
+          <h3 class="text-2xl font-bold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-transparent bg-clip-text">3K+</h3>
+          <p class="text-sm text-[#cbd5ff]">Employers</p>
+        </div>
+        <div class="bg-white/5 rounded-xl p-4 text-center transition hover:bg-white/10 hover:-translate-y-1">
+          <h3 class="text-2xl font-bold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-transparent bg-clip-text">28K+</h3>
+          <p class="text-sm text-[#cbd5ff]">Tasks</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-3 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">How SkillSprint Works</h2>
+      <p class="text-[#bfc8ff]">A simple workflow designed for students and employers.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#6a7cff] to-transparent"></div>
+        <div class="text-3xl mb-3">📝</div>
+        <h3 class="font-semibold text-lg">Create Profile</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Register and build your verified professional profile.</p>
+      </div>
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#22d3ee] to-transparent"></div>
+        <div class="text-3xl mb-3">🔍</div>
+        <h3 class="font-semibold text-lg">Discover Tasks</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Browse and apply for skill-based micro internships.</p>
+      </div>
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#f43f5e] to-transparent"></div>
+        <div class="text-3xl mb-3">🚀</div>
+        <h3 class="font-semibold text-lg">Work & Submit</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Complete tasks and submit real-world project work.</p>
+      </div>
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#6a7cff] to-transparent"></div>
+        <div class="text-3xl mb-3">🏆</div>
+        <h3 class="font-semibold text-lg">Build Portfolio</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Get verified feedback and grow your career profile.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 px-6">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-20">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose SkillSprint?</h2>
+      <p class="text-[#bfc8ff]">Designed for experiential learning and real-world impact.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#6a7cff] to-transparent"></div>
+        <div class="text-3xl mb-3">🎯</div>
+        <h3 class="font-semibold text-lg">Skill Matching</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Smart recommendations based on your skill profile.</p>
+      </div>
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#22d3ee] to-transparent"></div>
+        <div class="text-3xl mb-3">💼</div>
+        <h3 class="font-semibold text-lg">Portfolio Building</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Verified projects to showcase real experience.</p>
+      </div>
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#f43f5e] to-transparent"></div>
+        <div class="text-3xl mb-3">🔒</div>
+        <h3 class="font-semibold text-lg">Secure Platform</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Verified users, secure communication and data safety.</p>
+      </div>
+      <div class="relative bg-white/5 border border-white/10 p-7 rounded-2xl transition hover:-translate-y-4 hover:scale-[1.04] overflow-hidden">
+        <div class="absolute inset-0 opacity-0 hover:opacity-15 transition bg-gradient-to-r from-transparent via-[#6a7cff] to-transparent"></div>
+        <div class="text-3xl mb-3">🌍</div>
+        <h3 class="font-semibold text-lg">University Partners</h3>
+        <p class="text-sm text-[#cbd5ff] mt-1">Structured experiential learning with academic support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/10 py-3 text-center text-[#9aa4ff]">© 2026 SkillSprint. All rights reserved.</footer>
+
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>

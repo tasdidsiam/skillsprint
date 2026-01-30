@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillSprint | Settings</title>
+<link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/settings.css" />
+</head>
+<body class="bg-[#0b0f19] text-[#eaf0ff]">
+
+<div class="flex min-h-screen">
+
+<!-- Sidebar -->
+
+<aside id="sidebar" class="sidebar-dark fixed left-0 top-0 h-screen bg-[#05070f] border-r border-white/10 w-[72px] hover:w-64 transition-all duration-300 ease-in-out flex flex-col p-4 z-50 group overflow-hidden">
+  <div class="flex items-center gap-3 mb-10 cursor-pointer">
+    <img src="../assets/images/logo.svg" alt="SkillSprint Logo" class="w-20 h-20 object-contain flex-shrink-0">
+    <span class="text-2xl font-black logo-hover whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-300">SkillSprint</span>
+  </div>
+
+  <nav class="space-y-2 flex-1">
+    <a href="student-dashboard.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full"><span>🏠</span><span class="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[200px] transition-all duration-300">Dashboard</span></a>
+    <a href="browse-task.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full"><span>🔍</span><span class="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[200px] transition-all duration-300">Browse Tasks</span></a>
+    <a href="my-applications.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full"><span>📄</span><span class="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[200px] transition-all duration-300">My Applications</span></a>
+    <a href="active-projects.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full"><span>📁</span><span class="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[200px] transition-all duration-300">Active Projects</span></a>
+    <a href="portfolio.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full"><span>🎨</span><span class="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[200px] transition-all duration-300">Portfolio</span></a>
+    <a href="messages.html" class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full"><span>💬</span><span class="whitespace-nowrap overflow-hidden max-w-0 group-hover:max-w-[200px] transition-all duration-300">Messages</span></a>
+  </nav>
+</aside>
+
+<!-- Main -->
+
+<main class="flex-1 ml-20 p-8">
+
+  <div class="sticky top-0 bg-[#0b0f19] z-30 -mx-8 px-8 py-4 mb-10">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-3xl font-bold">Settings</h1>
+    </div>
+  </div>
+
+  <div class="max-w-7xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+      <!-- Left Menu -->
+      <div class="md:col-span-1">
+        <div class="setting-card border border-white/10 rounded-2xl p-4 space-y-2 sticky top-20">
+          <button onclick="setActiveMenu(0); document.getElementById('appearance').scrollIntoView({behavior:'smooth'})" class="menu-btn menu-item w-full text-left px-4 py-3 rounded-xl bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-medium transition-all hover:shadow-lg">🎨 Appearance</button>
+          <button onclick="setActiveMenu(1); document.getElementById('security').scrollIntoView({behavior:'smooth'})" class="menu-btn menu-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all hover:shadow-lg">🔒 Security</button>
+          <button onclick="setActiveMenu(2); document.getElementById('connected-accounts').scrollIntoView({behavior:'smooth'})" class="menu-btn menu-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all hover:shadow-lg">🔗 Connected Accounts</button>
+          <button onclick="setActiveMenu(3); document.getElementById('notifications').scrollIntoView({behavior:'smooth'})" class="menu-btn menu-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all hover:shadow-lg">🔔 Notifications</button>
+          <button onclick="setActiveMenu(4); document.getElementById('language').scrollIntoView({behavior:'smooth'})" class="menu-btn menu-item w-full text-left px-4 py-3 rounded-xl hover:bg-white/10 transition-all hover:shadow-lg">🌐 Language</button>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="md:col-span-3 space-y-6">
+
+        <!-- Appearance -->
+        <div id="appearance" class="scroll-mt-24"></div>
+        <div class="setting-card border border-white/10 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🎨</span>
+            <div>
+              <h2 class="text-2xl font-semibold">Appearance</h2>
+              <p class="text-white/40 text-sm">Customize your experience</p>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 cursor-pointer transition-all border border-white/10" onclick="toggleTheme()">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">🌙</span>
+              <div>
+                <span class="font-medium">Dark Mode</span>
+                <p class="text-white/40 text-sm">Easy on the eyes</p>
+              </div>
+            </div>
+            <label class="relative inline-flex items-center cursor-pointer" onclick="event.stopPropagation()">
+              <input id="themeToggle" type="checkbox" class="sr-only peer">
+              <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-[#6a7cff] peer-checked:to-[#22d3ee]"></div>
+            </label>
+          </div>
+
+        </div>
+
+        <!-- Security -->
+        <div id="security" class="scroll-mt-24"></div>
+        <div class="setting-card border border-white/10 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🔒</span>
+            <div>
+              <h2 class="text-2xl font-semibold">Security</h2>
+              <p class="text-white/40 text-sm">Keep your account safe</p>
+            </div>
+          </div>
+          <button onclick="openModal('changePassword')" class="menu-btn w-full px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-left transition-all border border-white/10 hover:border-white/20 group">
+            <span class="text-xl">🔑</span>
+            <span class="ml-3 font-medium">Change Password</span>
+            <span class="float-right text-white/40 group-hover:text-white/70 transition-all">→</span>
+          </button>
+          <button onclick="openModal('twoFactor')" class="menu-btn w-full px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 text-left mt-3 transition-all border border-white/10 hover:border-white/20 group">
+            <span class="text-xl">📱</span>
+            <span class="ml-3 font-medium">Two-Factor Authentication</span>
+            <span class="float-right text-white/40 group-hover:text-white/70 transition-all">→</span>
+          </button>
+        </div>
+
+        <!-- Connected Accounts -->
+        <div id="connected-accounts" class="scroll-mt-24"></div>
+        <div class="setting-card border border-white/10 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🔗</span>
+            <div>
+              <h2 class="text-2xl font-semibold">Connected Accounts</h2>
+              <p class="text-white/40 text-sm">Manage your social media connections</p>
+            </div>
+          </div>
+          
+          <div class="space-y-3">
+            <!-- Google -->
+            <div class="flex items-center justify-between px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all">
+              <div class="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                </svg>
+                <div>
+                  <p class="font-medium">Google</p>
+                  <p class="text-white/40 text-sm" id="googleStatus">Not connected</p>
+                </div>
+              </div>
+              <button onclick="connectAccount('google')" id="googleBtn" class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-medium hover:shadow-lg transition-all">Connect</button>
+            </div>
+
+            <!-- Apple -->
+            <div class="flex items-center justify-between px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all">
+              <div class="flex items-center gap-3">
+                <img src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple" width="24" height="24">
+                <div>
+                  <p class="font-medium">Apple</p>
+                  <p class="text-white/40 text-sm" id="appleStatus">Not connected</p>
+                </div>
+              </div>
+              <button onclick="connectAccount('apple')" id="appleBtn" class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-medium hover:shadow-lg transition-all">Connect</button>
+            </div>
+
+            <!-- Microsoft -->
+            <div class="flex items-center justify-between px-4 py-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all">
+              <div class="flex items-center gap-3">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="3" y="3" width="8" height="8" fill="#F25022"/>
+                  <rect x="13" y="3" width="8" height="8" fill="#7FBA00"/>
+                  <rect x="3" y="13" width="8" height="8" fill="#00A4EF"/>
+                  <rect x="13" y="13" width="8" height="8" fill="#FFB900"/>
+                </svg>
+                <div>
+                  <p class="font-medium">Microsoft</p>
+                  <p class="text-white/40 text-sm" id="microsoftStatus">Not connected</p>
+                </div>
+              </div>
+              <button onclick="connectAccount('microsoft')" id="microsoftBtn" class="px-4 py-2 rounded-lg bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-medium hover:shadow-lg transition-all">Connect</button>
+            </div>
+          </div>
+
+          <div class="mt-4 p-4 rounded-xl bg-white/5 border border-white/10">
+            <p class="text-white/70 text-sm">
+              <span class="font-medium">💡 Tip:</span> Once you connect a social account, you can use it to log in to SkillSprint. You can add multiple accounts for easier access.
+            </p>
+          </div>
+        </div>
+
+        <!-- Notifications -->
+        <div id="notifications" class="scroll-mt-24"></div>
+        <div class="setting-card border border-white/10 rounded-2xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🔔</span>
+            <div>
+              <h2 class="text-2xl font-semibold">Notifications</h2>
+              <p class="text-white/40 text-sm">Manage your notification preferences</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all cursor-pointer" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+              <div>
+                <p class="font-medium">Email Notifications</p>
+                <p class="text-white/40 text-sm">Get updates via email</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer" onclick="event.stopPropagation()">
+                <input type="checkbox" class="sr-only peer" checked>
+                <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-[#6a7cff] peer-checked:to-[#22d3ee]"></div>
+              </label>
+            </div>
+            <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all cursor-pointer" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+              <div>
+                <p class="font-medium">Push Notifications</p>
+                <p class="text-white/40 text-sm">Get instant updates</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer" onclick="event.stopPropagation()">
+                <input type="checkbox" class="sr-only peer" checked>
+                <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-[#6a7cff] peer-checked:to-[#22d3ee]"></div>
+              </label>
+            </div>
+            <div class="flex items-center justify-between px-4 py-3 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all cursor-pointer" onclick="this.querySelector('input').checked = !this.querySelector('input').checked">
+              <div>
+                <p class="font-medium">Task Reminders</p>
+                <p class="text-white/40 text-sm">Remind me about tasks</p>
+              </div>
+              <label class="relative inline-flex items-center cursor-pointer" onclick="event.stopPropagation()">
+                <input type="checkbox" class="sr-only peer">
+                <div class="w-11 h-6 bg-gray-600 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gradient-to-r peer-checked:from-[#6a7cff] peer-checked:to-[#22d3ee]"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Language -->
+        <div class="setting-card border border-white/10 rounded-2xl p-8" id="language">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">🌐</span>
+            <div>
+              <h2 class="text-2xl font-semibold">Language & Region</h2>
+              <p class="text-white/40 text-sm">Choose your preferred language</p>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-sm font-medium mb-2 text-white/70">Language</label>
+              <select class="input-field w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#6a7cff] transition-all">
+                <option>English</option>
+                <option>Bengali (বাংলা)</option>
+                <option>Hindi</option>
+                <option>Spanish</option>
+                <option>French</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2 text-white/70">Timezone</label>
+              <select class="input-field w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#22d3ee] transition-all">
+                <option>UTC+6:00 (Bangladesh)</option>
+                <option>UTC+5:30 (India)</option>
+                <option>UTC+0:00 (UTC)</option>
+                <option>UTC-5:00 (EST)</option>
+                <option>UTC+1:00 (CET)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+
+<!-- Change Password Modal -->
+<div id="changePasswordModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+  <div class="modal-content border border-white/10 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto" style="background-color: #05070f;">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold">🔑 Change Password</h2>
+      <button onclick="closeModal('changePassword')" class="text-white/40 hover:text-white/70 text-2xl leading-none">×</button>
+    </div>
+
+    <form id="changePasswordForm" onsubmit="savePassword(event)" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-2 text-white/70">Current Password</label>
+        <input id="currentPass" type="password" required class="input-field w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#6a7cff] transition-all" placeholder="Enter current password">
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-2 text-white/70">New Password</label>
+        <input id="newPass" type="password" required class="input-field w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#22d3ee] transition-all" placeholder="Enter new password">
+      </div>
+      <div>
+        <label class="block text-sm font-medium mb-2 text-white/70">Confirm Password</label>
+        <input id="confirmPass" type="password" required class="input-field w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#6a7cff] transition-all" placeholder="Confirm new password">
+      </div>
+      <p class="text-white/40 text-xs">Password must be at least 8 characters long with uppercase, lowercase, and numbers.</p>
+      <div class="flex gap-3 pt-4">
+        <button type="button" onclick="closeModal('changePassword')" class="flex-1 px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition-all">Cancel</button>
+        <button type="submit" class="flex-1 px-4 py-2 rounded-xl bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-semibold hover:shadow-lg transition-all">Update Password</button>
+      </div>
+    </form>
+
+    <div id="changePasswordSuccess" class="hidden text-center py-10">
+      <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-500/20 text-green-400 text-3xl">✓</div>
+      <h3 class="text-xl font-semibold mb-1">Password Updated</h3>
+      <p class="text-sm text-white/50">Your password has been changed successfully.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Two-Factor Authentication Modal -->
+<div id="twoFactorModal" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 flex items-center justify-center p-4">
+  <div class="modal-content border border-white/10 rounded-2xl p-8 max-w-md w-full max-h-[90vh] overflow-y-auto" style="background-color: #05070f;">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold">📱 Two-Factor Authentication</h2>
+      <button onclick="closeModal('twoFactor')" class="text-white/40 hover:text-white/70 text-2xl leading-none">×</button>
+    </div>
+
+    <form id="twoFactorForm" onsubmit="setupTwoFactor(event)" class="space-y-4">
+      <p class="text-white/70">Two-factor authentication adds an extra layer of security to your account.</p>
+      
+      <div class="bg-white/5 border border-white/10 rounded-xl p-4">
+        <h3 class="font-semibold mb-2">Authentication Methods</h3>
+        <div class="space-y-3">
+          <label class="flex items-center cursor-pointer hover:bg-white/5 p-2 rounded-lg transition-all">
+            <input type="radio" id="authApp" name="authMethod" class="sr-only peer">
+            <div class="w-4 h-4 border-2 border-white/30 rounded-full peer-checked:border-[#6a7cff] peer-checked:bg-[#6a7cff] transition-all"></div>
+            <div class="ml-3">
+              <p class="font-medium">Authenticator App</p>
+              <p class="text-white/40 text-xs">Use Google Authenticator, Authy, or Microsoft Authenticator</p>
+            </div>
+          </label>
+          <label class="flex items-center cursor-pointer hover:bg-white/5 p-2 rounded-lg transition-all">
+            <input type="radio" id="authSms" name="authMethod" class="sr-only peer" checked>
+            <div class="w-4 h-4 border-2 border-white/30 rounded-full peer-checked:border-[#22d3ee] peer-checked:bg-[#22d3ee] transition-all"></div>
+            <div class="ml-3">
+              <p class="font-medium">SMS Code</p>
+              <p class="text-white/40 text-xs">Receive codes via text message</p>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-2 text-white/70">Phone Number</label>
+        <input id="phoneNumber" type="tel" required class="input-field w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 outline-none focus:border-[#22d3ee] transition-all" placeholder="+880 1234567890">
+      </div>
+
+      <div class="flex gap-3 pt-4">
+        <button type="button" onclick="closeModal('twoFactor')" class="flex-1 px-4 py-2 rounded-xl border border-white/10 hover:bg-white/10 transition-all">Cancel</button>
+        <button type="submit" class="flex-1 px-4 py-2 rounded-xl bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-semibold hover:shadow-lg transition-all">Setup 2FA</button>
+      </div>
+    </form>
+
+    <div id="twoFactorSuccess" class="hidden text-center py-10">
+      <div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-green-500/20 text-green-400 text-3xl">✓</div>
+      <h3 class="text-xl font-semibold mb-1">2FA Setup Complete</h3>
+      <p class="text-sm text-white/50">Two-factor authentication is now enabled.</p>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/js/settings.js"></script>
+
+</body>
+</html>

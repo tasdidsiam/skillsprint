@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSprint | Forgot Password</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/forget-pass.css" />
+</head>
+<body class="bg-[#0b0f19] text-[#eaf0ff] min-h-screen flex items-center justify-center px-6 relative light">
+
+<div class="fixed top-6 right-6 z-50">
+  <label class="relative inline-flex items-center cursor-pointer">
+    <input type="checkbox" id="darkModeToggle" class="sr-only peer" />
+    <div class="w-14 h-8 bg-gray-300 peer-checked:bg-gradient-to-r peer-checked:from-[#6a7cff] peer-checked:to-[#22d3ee] rounded-full transition-all duration-300"></div>
+    <span class="absolute left-1 top-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300 peer-checked:translate-x-6"></span>
+  </label>
+</div>
+
+<div class="fixed top-6 left-6 z-50">
+  <a href="login.html" class="text-[#cbd5ff] hover:text-white transition flex items-center gap-2">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    Back
+  </a>
+</div>
+
+<div class="relative w-full max-w-md">
+
+  <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-[#6a7cff] via-[#22d3ee] to-[#f43f5e] blur-xl opacity-30"></div>
+
+  <div class="relative bg-white/5 border border-white/10 rounded-3xl p-10 backdrop-blur-xl shadow-[0_30px_80px_rgba(0,0,0,.55)]">
+
+    <!-- Header -->
+    <div class="text-center mb-8">
+      <a href="../index.html" class="flex items-center gap-3 justify-center mb-3 transition-transform hover:scale-110 active:scale-95">
+        <img src="../assets/images/logo.svg" alt="SkillSprint Logo" class="w-24 h-24 object-contain">
+      </a>
+      <p class="text-[#cbd5ff] mt-2">Reset your password</p>
+    </div>
+
+    <!-- Step Indicator -->
+    <div class="step-indicator">
+      <div class="step active" id="stepNum1">1</div>
+      <div class="step-connector" id="connector1"></div>
+      <div class="step inactive" id="stepNum2">2</div>
+      <div class="step-connector" id="connector2"></div>
+      <div class="step inactive" id="stepNum3">3</div>
+    </div>
+
+    <!-- Step 1: Email Input -->
+    <div id="step1" class="step-content">
+      <form id="emailForm" class="space-y-5">
+        <!-- Error Message -->
+        <div id="errorMessage" class="hidden bg-red-500/20 border border-red-500/50 text-red-400 px-4 py-3 rounded-xl text-sm">
+          <span id="errorText">An error occurred. Please try again.</span>
+        </div>
+
+        <div>
+          <label class="block text-[#cbd5ff] text-sm font-medium mb-3">Enter your email address</label>
+          <input id="emailInput" type="email" placeholder="your@email.com"
+          class="w-full px-5 py-3.5 rounded-xl bg-[#0f1422] border border-white/10 text-[#eaf0ff] focus:outline-none focus:border-cyan-400 transition">
+          <p class="text-[#8a93b8] text-xs mt-2">We'll send you a verification code</p>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl font-semibold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(34,211,238,.35)]">
+          Continue
+        </button>
+
+        <p class="text-sm text-center text-[#bfc8ff]">
+          Remember your password?
+          <a href="login.html" class="text-cyan-400 hover:underline">Login</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Step 2: Verification Code -->
+    <div id="step2" class="step-content hidden">
+      <form id="codeForm" class="space-y-5">
+        <div id="errorMessage2" class="hidden bg-red-500/20 border border-red-500/50 text-red-400 px-4 py-3 rounded-xl text-sm">
+          <span id="errorText2">Invalid code. Please try again.</span>
+        </div>
+
+        <div id="successMessage2" class="hidden bg-green-500/20 border border-green-500/50 text-green-400 px-4 py-3 rounded-xl text-sm">
+          <span id="successText2">Verification code resent to your email!</span>
+        </div>
+
+        <div>
+          <label class="block text-[#cbd5ff] text-sm font-medium mb-3">Enter verification code</label>
+          <p class="text-[#8a93b8] text-sm mb-3">We sent a 6-digit code to your email</p>
+          <div class="flex gap-2 justify-between">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center rounded-lg bg-[#0f1422] border border-white/10 text-[#eaf0ff] text-lg font-bold focus:outline-none focus:border-cyan-400 transition" placeholder="0">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center rounded-lg bg-[#0f1422] border border-white/10 text-[#eaf0ff] text-lg font-bold focus:outline-none focus:border-cyan-400 transition" placeholder="0">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center rounded-lg bg-[#0f1422] border border-white/10 text-[#eaf0ff] text-lg font-bold focus:outline-none focus:border-cyan-400 transition" placeholder="0">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center rounded-lg bg-[#0f1422] border border-white/10 text-[#eaf0ff] text-lg font-bold focus:outline-none focus:border-cyan-400 transition" placeholder="0">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center rounded-lg bg-[#0f1422] border border-white/10 text-[#eaf0ff] text-lg font-bold focus:outline-none focus:border-cyan-400 transition" placeholder="0">
+            <input type="text" maxlength="1" class="w-12 h-12 text-center rounded-lg bg-[#0f1422] border border-white/10 text-[#eaf0ff] text-lg font-bold focus:outline-none focus:border-cyan-400 transition" placeholder="0">
+          </div>
+          <input id="codeInput" type="hidden">
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl font-semibold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(34,211,238,.35)]">
+          Verify Code
+        </button>
+
+        <p class="text-sm text-center text-[#bfc8ff]">
+          Didn't receive the code?
+          <button type="button" onclick="resendCode()" class="text-cyan-400 hover:underline">Resend</button>
+        </p>
+      </form>
+    </div>
+
+    <!-- Step 3: New Password -->
+    <div id="step3" class="step-content hidden">
+      <form id="passwordForm" class="space-y-5">
+        <div id="errorMessage3" class="hidden bg-red-500/20 border border-red-500/50 text-red-400 px-4 py-3 rounded-xl text-sm">
+          <span id="errorText3">Password update failed. Please try again.</span>
+        </div>
+
+        <div>
+          <label class="block text-[#cbd5ff] text-sm font-medium mb-3">New Password</label>
+          <div class="relative">
+            <input id="newPasswordInput" type="password" placeholder="Enter new password"
+autocomplete="new-password"
+class="w-full px-5 py-3.5 rounded-xl bg-[#0f1422] border border-white/10 text-[#eaf0ff] focus:outline-none focus:border-cyan-400 transition">
+            <button type="button" id="toggleNewPassword" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#eaf0ff] transition hover:opacity-80">
+              <svg id="eyeIcon1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <div class="password-strength-bar" id="strengthBar" style="width: 0%;"></div>
+          <p class="password-strength-text text-[#8a93b8]" id="strengthText"></p>
+        </div>
+
+        <div>
+          <label class="block text-[#cbd5ff] text-sm font-medium mb-3">Confirm Password</label>
+          <div class="relative">
+            <input id="confirmPasswordInput" type="password" placeholder="Confirm password"
+autocomplete="new-password"
+class="w-full px-5 py-3.5 rounded-xl bg-[#0f1422] border border-white/10 text-[#eaf0ff] focus:outline-none focus:border-cyan-400 transition">
+
+            <button type="button" id="toggleConfirmPassword" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-[#eaf0ff] transition hover:opacity-80">
+              <svg id="eyeIcon2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+          <div class="password-match-status" id="matchStatus" style="display: none;">
+            <span class="password-match-icon" id="matchIcon">✓</span>
+            <span id="matchText">Password match</span>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl font-semibold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(34,211,238,.35)]">
+          Reset Password
+        </button>
+
+        <p class="text-sm text-center text-[#bfc8ff]">
+          <a href="login.html" class="text-cyan-400 hover:underline">Back to login</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Success Message (Hidden) -->
+    <div id="successStep" class="step-content hidden text-center">
+      <div class="mb-6">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] flex items-center justify-center mx-auto mb-4">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-white mb-2">Password Reset Successful!</h2>
+        <p class="text-[#cbd5ff]">Your password has been updated successfully</p>
+      </div>
+
+      <a href="login.html" class="block w-full py-3.5 rounded-xl font-semibold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black transition hover:-translate-y-1 hover:shadow-[0_12px_30px_rgba(34,211,238,.35)] text-center">
+        Back to Login
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<script src="../assets/js/forget-pass.js"></script>
+
+</body>
+</html>

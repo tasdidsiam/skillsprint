@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSprint | Student Profile</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/student-profile.css" />
+</head>
+<body class="bg-[#0b0f19] text-[#eaf0ff]">
+
+<div class="flex min-h-screen">
+
+<aside id="sidebar"
+  class="fixed left-0 top-0 h-screen bg-[#05070f] border-r border-white/10
+         w-[72px] hover:w-64 transition-all duration-300 ease-in-out
+         flex flex-col p-4 z-50 group overflow-hidden">
+
+<div class="flex items-center gap-3 mb-10 cursor-pointer">
+  <img src="../assets/images/logo.svg" alt="SkillSprint Logo" class="w-20 h-20 object-contain flex-shrink-0">
+  <span class="text-2xl font-black logo-hover whitespace-nowrap
+        opacity-0 group-hover:opacity-100 transition-all duration-300">
+    SkillSprint
+  </span>
+</div>
+
+
+  <nav class="space-y-2 flex-1">
+
+    <a href="student-dashboard.html"
+      class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">
+      <span>🏠</span>
+      <span
+        class="whitespace-nowrap overflow-hidden
+               max-w-0 group-hover:max-w-[200px]
+               transition-all duration-300">
+        Dashboard
+      </span>
+    </a>
+
+    <a href="browse-task.html"
+      class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">
+      <span>🔍</span>
+      <span
+        class="whitespace-nowrap overflow-hidden
+               max-w-0 group-hover:max-w-[200px]
+               transition-all duration-300">
+        Browse Tasks
+      </span>
+    </a>
+
+    <a href="my-applications.html"
+      class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">
+      <span>📄</span>
+      <span
+        class="whitespace-nowrap overflow-hidden
+               max-w-0 group-hover:max-w-[200px]
+               transition-all duration-300">
+        My Applications
+      </span>
+    </a>
+
+    <a href="active-projects.html"
+      class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">
+      <span>📁</span>
+      <span
+        class="whitespace-nowrap overflow-hidden
+               max-w-0 group-hover:max-w-[200px]
+               transition-all duration-300">
+        Active Projects
+      </span>
+    </a>
+
+    <a href="portfolio.html"
+      class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">
+      <span>🎨</span>
+      <span
+        class="whitespace-nowrap overflow-hidden
+               max-w-0 group-hover:max-w-[200px]
+               transition-all duration-300">
+        Portfolio
+      </span>
+    </a>
+
+    <a href="messages.html"
+      class="flex items-center gap-3 px-3 py-2 rounded-xl hover:text-white transition relative after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-[#6a7cff] after:to-[#22d3ee] after:transition-all hover:after:w-full">
+      <span>💬</span>
+      <span
+        class="whitespace-nowrap overflow-hidden
+               max-w-0 group-hover:max-w-[200px]
+               transition-all duration-300">
+        Messages
+      </span>
+    </a>
+
+  </nav>
+
+</aside>
+
+  <main class="flex-1 p-8 max-w-5xl mx-auto ml-0 lg:ml-40">
+
+    <h1 class="text-3xl font-bold mb-8">My Profile</h1>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
+        <img id="avatarPreview" src="https://avatars.githubusercontent.com/u/160993788?s=400&u=1c4120f2ebbc85546ca7a517ab24b7cb0897d78b&v=4"
+             class="w-32 h-32 rounded-full object-cover mx-auto border-4 border-white/10">
+        <input id="avatarInput" type="file" accept="image/*" class="hidden" onchange="previewAvatar(this)">
+        <button onclick="document.getElementById('avatarInput').click()"
+          class="mt-4 px-4 py-2 rounded-xl bg-white/5 hover:bg-white/10 transition">
+          Change Photo
+        </button>
+        <h2 class="mt-4 text-xl font-semibold">Tasdid Siam</h2>
+        <p class="text-sm text-[#bfc8ff]">Student</p>
+        
+        <!-- Rating Summary -->
+        <div class="mt-6 pt-6 border-t border-white/10">
+          <div class="flex items-center justify-center gap-2 mb-2">
+            <span class="text-2xl font-bold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-white px-3 py-1 rounded-lg" id="profileRating">0.0</span>
+            <div class="flex gap-1" id="profileStars"></div>
+          </div>
+          <p class="text-xs text-[#bfc8ff]" id="profileReviewCount">0 reviews</p>
+          <a href="#ratings-reviews" class="text-xs text-[#6a7cff] hover:text-[#22d3ee] mt-2 inline-block transition">View all reviews →</a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2 space-y-6">
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4">Basic Information</h3>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-medium mb-2">Full Name <span style="color: #dc2626;">*</span></label>
+              <input type="text" placeholder="e.g., John Doe" class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label class="text-sm font-medium">Email <span style="color: #dc2626;">*</span></label>
+                <button id="emailActionBtn" onclick="document.getElementById('emailModal').classList.remove('modal-hidden'); document.getElementById('emailModal').classList.add('modal-visible');" class="text-blue-600 text-sm font-semibold whitespace-nowrap">
+                  Change
+                </button>
+              </div>
+              <input type="email" placeholder="e.g., john@example.com" id="emailField" class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none" readonly>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Phone <span style="color: #dc2626;">*</span></label>
+              <input type="text" placeholder="e.g., +880 1234 567890" class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Location</label>
+              <input type="text" placeholder="e.g., Dhaka, Bangladesh" class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4">Bio</h3>
+          <label class="block text-sm font-medium mb-2">About You</label>
+          <textarea rows="4" placeholder="e.g., I'm a passionate developer..."
+            class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none"></textarea>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4">Skills</h3>
+
+          <div id="skillsWrap" class="flex flex-wrap gap-2 mb-4"></div>
+
+          <div class="flex gap-3">
+            <input id="skillInput" type="text" placeholder="e.g., JavaScript, React, Python"
+              class="flex-1 px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+            <button onclick="addSkill()"
+              class="px-5 py-2 rounded-xl bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-semibold">
+              Add
+            </button>
+          </div>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4">Education</h3>
+          <label class="block text-sm font-medium mb-2">Institute Name <span style="color: #dc2626;">*</span></label>
+          <input type="text" placeholder="e.g., Bangladesh University of Engineering and Technology"
+            class="w-full px-4 py-2 mb-3 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+          <label class="block text-sm font-medium mb-2">Degree / Program <span style="color: #dc2626;">*</span></label>
+          <input type="text" placeholder="e.g., Bachelor of Science in Computer Science"
+            class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+        </div>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+          <h3 class="text-lg font-semibold mb-4">Portfolio Links</h3>
+          <div class="space-y-3">
+            <div>
+              <label class="block text-sm font-medium mb-2">GitHub URL</label>
+              <input type="text" placeholder="e.g., https://github.com/username"
+                class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-2">Live Portfolio Website</label>
+              <input type="text" placeholder="e.g., https://yourportfolio.com"
+                class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none">
+            </div>
+          </div>
+        </div>
+
+        <button onclick="showToast()"
+  class="px-8 py-2 rounded-xl font-semibold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black mx-auto block">
+  Save Changes
+</button>
+
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-6" id="ratings-reviews">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-lg font-semibold">Ratings & Reviews</h3>
+            <span class="text-sm text-[#bfc8ff]" id="totalRatings">0 reviews</span>
+          </div>
+
+          <!-- Overall Rating -->
+          <div class="mb-8 pb-8 border-b border-white/10">
+            <div class="flex items-start gap-6">
+              <div class="flex flex-col items-center">
+                <div class="text-4xl font-bold bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-white px-4 py-2 rounded-lg" id="overallRating">0.0</div>
+                <div class="flex gap-1 mt-2 justify-center" id="overallStars"></div>
+                <p class="text-xs text-[#6b7280] mt-2">Based on reviews</p>
+              </div>
+
+              <!-- Rating Breakdown -->
+              <div class="flex-1 space-y-2">
+                <div class="flex items-center gap-3">
+                  <span class="text-sm w-10 text-right">5 ⭐</span>
+                  <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#6a7cff] to-[#22d3ee]" id="bar5" style="width: 0%"></div>
+                  </div>
+                  <span class="text-sm text-[#6b7280] w-10 text-right" id="count5">0</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm w-10 text-right">4 ⭐</span>
+                  <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#6a7cff] to-[#22d3ee]" id="bar4" style="width: 0%"></div>
+                  </div>
+                  <span class="text-sm text-[#6b7280] w-10 text-right" id="count4">0</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm w-10 text-right">3 ⭐</span>
+                  <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#6a7cff] to-[#22d3ee]" id="bar3" style="width: 0%"></div>
+                  </div>
+                  <span class="text-sm text-[#6b7280] w-10 text-right" id="count3">0</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm w-10 text-right">2 ⭐</span>
+                  <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#6a7cff] to-[#22d3ee]" id="bar2" style="width: 0%"></div>
+                  </div>
+                  <span class="text-sm text-[#6b7280] w-10 text-right" id="count2">0</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm w-10 text-right">1 ⭐</span>
+                  <div class="flex-1 h-2 bg-white/5 rounded-full overflow-hidden">
+                    <div class="h-full bg-gradient-to-r from-[#6a7cff] to-[#22d3ee]" id="bar1" style="width: 0%"></div>
+                  </div>
+                  <span class="text-sm text-[#6b7280] w-10 text-right" id="count1">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Individual Reviews -->
+          <div id="reviewsList" class="space-y-4 max-h-96 overflow-y-auto">
+            <p class="text-center text-[#bfc8ff] text-sm py-8">No reviews yet</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+</div>
+
+<div id="toast" class="hidden fixed bottom-6 right-6 bg-green-500 text-black px-6 py-3 rounded-xl font-semibold shadow-lg">
+  Profile Saved Successfully ✔
+</div>
+
+<!-- Email Change Modal -->
+<div id="emailModal" class="modal-hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50" onclick="if(event.target.id === 'emailModal') closeEmailModal()">
+  <div class="bg-[#0b0f19] border border-white/10 rounded-3xl p-8 max-w-md w-full mx-4">
+    <h2 class="text-2xl font-bold mb-2">Change Email</h2>
+    <p class="text-[#bfc8ff] mb-6">Enter your new email address. We'll send a verification code.</p>
+    
+    <div class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-2">Current Email</label>
+        <input type="email" id="currentEmail" readonly class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-[#8a93b8]">
+      </div>
+      
+      <div>
+        <label class="block text-sm font-medium mb-2">New Email <span style="color: #dc2626;">*</span></label>
+        <input type="email" id="newEmailInput" placeholder="e.g., newemail@example.com" class="w-full px-4 py-2 rounded-xl bg-white/5 border border-white/10 focus:outline-none focus:border-cyan-400 transition">
+      </div>
+
+      <div id="emailError" class="hidden bg-red-500/20 border border-red-500/50 text-red-400 px-4 py-3 rounded-xl text-sm">
+        <span id="emailErrorText">Invalid email address</span>
+      </div>
+    </div>
+
+    <div class="flex gap-3 mt-6">
+      <button type="button" onclick="closeEmailModal()" class="flex-1 px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 transition font-medium">
+        Cancel
+      </button>
+      <button type="button" onclick="submitEmailChange()" class="flex-1 px-4 py-2 rounded-xl bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-semibold hover:shadow-lg transition">
+        Verify Email
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Email Changed Success Modal -->
+<div id="emailSuccessModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <div class="bg-[#0b0f19] border border-white/10 rounded-3xl p-8 max-w-md w-full mx-4 text-center">
+    <!-- Success Icon -->
+    <div id="successIcon" class="mb-6 flex justify-center">
+      <svg class="w-20 h-20 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" fill="none"/>
+        <path id="successCheckmark" d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <!-- Success Message -->
+    <h2 class="text-2xl font-bold mb-2">Email Changed Successfully!</h2>
+    <p class="text-[#bfc8ff] mb-6">Your email address has been updated.</p>
+
+    <!-- New Email Display -->
+    <div class="bg-white/5 border border-white/10 rounded-xl p-4 mb-8">
+      <p class="text-sm text-[#8a93b8] mb-2">New Email Address</p>
+      <p class="text-lg font-semibold" id="successEmailDisplay">--</p>
+    </div>
+
+    <!-- Back to Profile Button -->
+    <button type="button" onclick="closeEmailSuccessModal()" class="w-full px-6 py-3 rounded-xl bg-gradient-to-r from-[#6a7cff] to-[#22d3ee] text-black font-semibold hover:shadow-lg transition">
+      Back to Profile
+    </button>
+  </div>
+</div>
+
+<script src="../assets/js/student-profile.js"></script>
+
+</body>
+</html>

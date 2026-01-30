@@ -1,0 +1,307 @@
+    body{font-family:'Inter',sans-serif}
+    .logo-hover{background:linear-gradient(90deg,#fff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;transition:.6s}
+    .logo-hover:hover{background:linear-gradient(120deg,#6a7cff,#22d3ee,#f43f5e);background-size:300% 300%;animation:floatGradient 3s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    @keyframes floatGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    
+    
+    /* Light Mode */
+    body.light {
+      background: #f7f9fc !important;
+      color: #0f172a !important;
+    }
+    
+    body.light .bg-\[\#0b0f19\] {
+      background-color: #f7f9fc !important;
+    }
+    
+    body.light .text-\[\#eaf0ff\] {
+      color: #1f2937 !important;
+    }
+    
+    body.light .bg-white\/5 {
+      background-color: #f3f4f6 !important;
+    }
+    
+    body.light .border-white\/10 {
+      border-color: #e5e7eb !important;
+    }
+    
+    body.light .bg-gradient-to-r.from-\[\#6a7cff\].via-\[\#22d3ee\].to-\[\#f43f5e\] {
+      opacity: 0.15 !important;
+    }
+    
+    body.light h1, body.light h3, body.light p {
+      color: #1f2937 !important;
+    }
+    
+    body.light input::placeholder {
+      color: #9ca3af !important;
+    }
+    
+    body.light input {
+      background-color: #ffffff !important;
+      border-color: #e5e7eb !important;
+      color: #1f2937 !important;
+    }
+    
+    body.light input:focus {
+      border-color: #6a7cff !important;
+    }
+    
+    body.light .bg-white\/5 {
+      background-color: #f3f4f6 !important;
+    }
+    
+    body.light button:not(.bg-gradient-to-r) {
+      border-color: #d1d5db !important;
+      color: #1f2937 !important;
+    }
+    
+    body.light a {
+      color: #0066cc !important;
+    }
+
+    body.light .text-\[\#cbd5ff\] {
+      color: #6b7280 !important;
+    }
+
+    body.light .text-\[\#bfc8ff\] {
+      color: #6b7280 !important;
+    }
+
+    /* Password Strength Indicator */
+    .password-strength-bar {
+      height: 4px;
+      border-radius: 2px;
+      margin-top: 8px;
+      transition: all 0.3s ease;
+      background-color: #1f2937;
+    }
+
+    .password-strength-text {
+      font-size: 12px;
+      margin-top: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .strength-too-short {
+      background-color: #ef4444;
+      color: #ef4444;
+    }
+
+    .strength-medium {
+      background-color: #f59e0b;
+      color: #f59e0b;
+    }
+
+    .strength-strong {
+      background-color: #10b981;
+      color: #10b981;
+    }
+
+    /* Password Match Indicator */
+    .password-match-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .password-match-icon {
+      width: 18px;
+      height: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .match-success {
+      color: #10b981;
+    }
+
+    .match-error {
+      color: #ef4444;
+    }
+
+    /* Filled circle icons for both modes */
+    .password-match-icon.match-success {
+      color: #ffffff;
+      background-color: #10b981;
+      border-radius: 50%;
+      font-weight: bold;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    .password-match-icon.match-error {
+      color: #ffffff;
+      background-color: #ef4444;
+      border-radius: 50%;
+      font-weight: bold;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    /* Light Mode Password Strength */
+    body.light .password-strength-bar {
+      background-color: #e5e7eb;
+    }
+
+    body.light .password-strength-text {
+      color: #1f2937;
+    }
+
+    body.light .strength-too-short {
+      background-color: #ef4444;
+      color: #ef4444;
+    }
+
+    body.light .strength-medium {
+      background-color: #f59e0b;
+      color: #f59e0b;
+    }
+
+    body.light .strength-strong {
+      background-color: #10b981;
+      color: #10b981;
+    }
+
+    body.light .password-match-status {
+      color: #1f2937;
+    }
+
+    body.light .match-success {
+      color: #10b981;
+    }
+
+    body.light .match-error {
+      color: #ef4444;
+    }
+
+    body.light #matchText.match-success {
+      color: #10b981 !important;
+    }
+
+    body.light #matchText.match-error {
+      color: #ef4444 !important;
+    }
+
+    /* Light Mode - Match Icons */
+    body.light .password-match-icon.match-success {
+      color: #ffffff !important;
+      background-color: #10b981 !important;
+      border-radius: 50%;
+      font-weight: bold;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+
+    body.light .password-match-icon.match-error {
+      color: #ffffff !important;
+      background-color: #ef4444 !important;
+      border-radius: 50%;
+      font-weight: bold;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    
+    #toggleSwitch {
+      background-color: #d1d5db;
+      transition: background-color 0.3s ease;
+    }
+    
+    #toggleSwitch:has(#darkModeToggle:checked) {
+      background: linear-gradient(90deg, #6a7cff, #22d3ee) !important;
+    }
+
+    .step-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .step {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .step.active {
+      background: linear-gradient(90deg, #6a7cff, #22d3ee);
+      color: black;
+    }
+
+    .step.inactive {
+      background: rgba(255, 255, 255, 0.1);
+      color: #eaf0ff;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .step-connector {
+      width: 40px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .step-connector.active {
+      background: linear-gradient(90deg, #6a7cff, #22d3ee);
+    }
+
+    body.light .step.inactive {
+      background: #e5e7eb;
+      color: #6b7280;
+      border-color: #d1d5db;
+    }
+
+    body.light .step-connector {
+      background: #d1d5db;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .step-content {
+      display: block;
+    }
+
+    .step-content.hidden {
+      display: none !important;
+    }
+
+    /* Remove browser built-in password reveal icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-contacts-auto-fill-button {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}

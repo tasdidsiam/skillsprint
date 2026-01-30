@@ -1,0 +1,90 @@
+    body{font-family:'Inter',sans-serif}
+    .logo-hover{background:linear-gradient(90deg,#fff,#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;transition:.6s}
+    .logo-hover:hover{background:linear-gradient(120deg,#6a7cff,#22d3ee,#f43f5e);background-size:300% 300%;animation:floatGradient 3s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    @keyframes floatGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    
+    /* Remove browser built-in password reveal icon (Chrome / Edge / Safari) */
+.password-input::-ms-reveal,
+.password-input::-ms-clear,
+.password-input::-webkit-credentials-auto-fill-button,
+.password-input::-webkit-contacts-auto-fill-button {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+    /* Light Mode */
+    body.light {
+      background: #f7f9fc !important;
+      color: #0f172a !important;
+    }
+    
+    body.light .bg-\[\#0b0f19\] {
+      background-color: #f7f9fc !important;
+    }
+    
+    body.light .text-\[\#eaf0ff\] {
+      color: #1f2937 !important;
+    }
+    
+    body.light .bg-white\/5 {
+      background-color: #f3f4f6 !important;
+    }
+    
+    body.light .border-white\/10 {
+      border-color: #e5e7eb !important;
+    }
+    
+    body.light .bg-gradient-to-r.from-\[\#6a7cff\].via-\[\#22d3ee\].to-\[\#f43f5e\] {
+      opacity: 0.15 !important;
+    }
+    
+    body.light h1, body.light h3, body.light p {
+      color: #1f2937 !important;
+    }
+    
+    body.light input::placeholder {
+      color: #9ca3af !important;
+    }
+    
+    body.light input {
+      background-color: #ffffff !important;
+      border-color: #e5e7eb !important;
+      color: #1f2937 !important;
+    }
+    
+    body.light input:focus {
+      border-color: #6a7cff !important;
+    }
+    
+    body.light .bg-white\/5 {
+      background-color: #f3f4f6 !important;
+    }
+    
+    body.light button:not(.bg-gradient-to-r) {
+      border-color: #d1d5db !important;
+      color: #1f2937 !important;
+    }
+    
+    body.light a {
+      color: #0066cc !important;
+    }
+    
+    /* Password visibility toggle icon */
+    .password-toggle-btn {
+      color: #eaf0ff;
+    }
+    
+    body.light .password-toggle-btn {
+      color: #6b7280 !important;
+    }
+    
+    #toggleSwitch {
+      background-color: #d1d5db;
+      transition: background-color 0.3s ease;
+    }
+    
+    #toggleSwitch:has(#darkModeToggle:checked) {
+      background: linear-gradient(90deg, #6a7cff, #22d3ee) !important;
+    }

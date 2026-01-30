@@ -1,0 +1,490 @@
+body{font-family:'Inter',sans-serif}
+.logo-hover{
+  background:linear-gradient(90deg,#fff,#fff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  transition:.6s;
+}
+.logo-hover:hover{
+  background:linear-gradient(120deg,#6a7cff,#22d3ee,#f43f5e);
+  background-size:300% 300%;
+  animation:floatGradient 3s ease infinite;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+@keyframes floatGradient{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* Sidebar Light Mode */
+aside.light-mode {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+/* Sidebar Dark Mode (match settings page) */
+.sidebar-dark {
+  background-color: #05070f !important;
+  color: #eaf0ff !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+.sidebar-dark nav a {
+  color: #eaf0ff !important;
+}
+
+.sidebar-dark nav a:hover {
+  color: white !important;
+}
+
+/* Sidebar Light Mode (match settings page) */
+.sidebar-light {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-color: rgba(0,0,0,0.1) !important;
+}
+
+.sidebar-light nav a {
+  color: #1f2937 !important;
+}
+
+.sidebar-light nav a:hover {
+  color: #111827 !important;
+}
+
+.sidebar-light span {
+  color: #1f2937 !important;
+}
+
+aside.light-mode a {
+  color: #1f2937 !important;
+  transition: all 0.3s ease;
+}
+
+aside.light-mode a:hover {
+  color: #111827 !important;
+  background-color: transparent !important; /* remove light hover fill */
+}
+
+aside.light-mode span {
+  color: #1f2937 !important;
+}
+
+aside.light-mode .logo-hover {
+  color: #1f2937 !important; /* ensure visible by default */
+  background: none !important;
+  -webkit-text-fill-color: #1f2937 !important;
+  transition: .6s !important;
+}
+
+aside.light-mode .logo-hover:hover {
+  background: linear-gradient(120deg,#6a7cff,#22d3ee,#f43f5e) !important; /* same hover as dark mode */
+  background-size: 300% 300% !important;
+  animation: floatGradient 3s ease infinite;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+aside.light-mode div {
+  color: #1f2937 !important;
+}
+
+aside.light-mode p {
+  color: #1f2937 !important;
+}
+
+aside.light-mode svg {
+  color: #6b7280 !important;
+  transition: all 0.3s ease;
+}
+
+aside.light-mode a:hover svg {
+  color: #111827 !important;
+}
+
+aside.light-mode .bg-white\/5 {
+  background-color: #ffffff !important;
+  transition: background-color 0.3s ease;
+}
+
+aside.light-mode .hover\:bg-white\/10:hover {
+  background-color: #e5e7eb !important;
+}
+
+/* Main Content Light Mode */
+main.light-mode {
+  background-color: #f9fafb;
+}
+
+main.light-mode .text-white\/50 {
+  color: #9ca3af;
+}
+
+main.light-mode .text-white\/40 {
+  color: #d1d5db;
+}
+
+main.light-mode .input-field {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+main.light-mode h1, main.light-mode h2, main.light-mode h3, main.light-mode h4, main.light-mode h5, main.light-mode h6, main.light-mode span, main.light-mode div, main.light-mode p, main.light-mode label {
+  color: #1f2937 !important;
+}
+
+/* Keep required field indicators red in light mode */
+main.light-mode span[style*="color: #dc2626"] {
+  color: #dc2626 !important;
+}
+
+main.light-mode .text-white\/70 {
+  color: #6b7280 !important;
+}
+
+main.light-mode .bg-white\/5 {
+  background-color: #f3f4f6 !important;
+}
+
+main.light-mode .border-white\/10 {
+  border-color: #e5e7eb !important;
+}
+
+/* Light Mode - Change Photo Button */
+main.light-mode button:has(+ h2) {
+  border: 1px solid #000000 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease !important;
+  color: #1f2937 !important;
+}
+
+main.light-mode button:has(+ h2):hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Dark Mode - Change Photo Button */
+button:has(+ h2):hover {
+  background: linear-gradient(to right, #6a7cff, #22d3ee) !important;
+  color: #ffffff !important;
+}
+
+body.light {
+  background: #f7f9fc;
+  color: #0f172a;
+}
+
+/* Light Mode - Profile Menu */
+main.light-mode #profileMenu {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+main.light-mode #profileMenu a {
+  color: #1f2937 !important;
+  background-color: transparent !important;
+}
+
+main.light-mode #profileMenu a:hover {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+main.light-mode #profileMenu div {
+  color: #1f2937 !important;
+}
+
+main.light-mode #profileMenu div:hover {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+main.light-mode #profileMenu .text-red-400 {
+  color: #dc2626 !important;
+}
+
+main.light-mode #profileMenu .text-red-400:hover {
+  background-color: #fee2e2 !important;
+}
+
+main.light-mode .logo-hover {
+  color: #1f2937 !important;
+}
+
+main.light-mode .text-\[\#bfc8ff\] {
+  color: #6b7280 !important;
+}
+
+main.light-mode button {
+  color: #1f2937 !important;
+  transition: all 0.3s ease;
+}
+
+main.light-mode button:hover {
+  background-color: #e5e7eb !important;
+  color: #111827 !important;
+}
+
+/* Change/Add Email Button - Same in light and dark mode */
+main.light-mode #emailActionBtn,
+#emailActionBtn {
+  color: #2563eb !important;
+  background-color: transparent !important;
+  transition: none !important;
+}
+
+main.light-mode #emailActionBtn:hover,
+#emailActionBtn:hover {
+  background-color: transparent !important;
+  color: #2563eb !important;
+}
+
+main.light-mode p, 
+main.light-mode .text-sm,
+main.light-mode .text-xs {
+  color: #1f2937 !important;
+}
+
+main.light-mode a {
+  color: #1f2937 !important;
+  transition: all 0.3s ease;
+}
+
+main.light-mode a:hover {
+  color: #111827 !important;
+  background-color: #e5e7eb !important;
+}
+
+/* Light Mode - Form inputs */
+main.light-mode input,
+main.light-mode textarea {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+main.light-mode input:focus,
+main.light-mode textarea:focus {
+  border-color: #6a7cff !important;
+  outline: none !important;
+}
+
+main.light-mode input::placeholder,
+main.light-mode textarea::placeholder {
+  color: #9ca3af !important;
+}
+
+main.light-mode .bg-white\/10 {
+  background-color: #f3f4f6 !important;
+}
+
+main.light-mode .bg-gradient-to-r {
+  background: linear-gradient(90deg, #6a7cff, #22d3ee) !important;
+  color: white !important;
+}
+
+/* Toggle Switch Styling */
+#toggleSwitch {
+  background-color: #d1d5db;
+  transition: background-color 0.3s ease;
+}
+
+/* Use :has() to style parent label when checkbox is checked */
+#toggleSwitch:has(#darkModeToggle:checked) {
+  background: linear-gradient(90deg, #6a7cff, #22d3ee) !important;
+}
+
+/* Modal visibility toggle */
+.modal-hidden {
+  display: none !important;
+}
+
+.modal-visible {
+  display: flex !important;
+}
+
+/* Input and Search Styling */
+main.light-mode input[type="text"],
+main.light-mode input[type="search"] {
+  background-color: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #1f2937 !important;
+  transition: all 0.3s ease !important;
+}
+
+main.light-mode input[type="text"]:focus,
+main.light-mode input[type="search"]:focus {
+  border-color: #6a7cff !important;
+  box-shadow: 0 0 0 3px rgba(106, 124, 255, 0.1) !important;
+}
+
+main.light-mode input::placeholder {
+  color: #9ca3af !important;
+}
+
+/* Select/Dropdown Styling */
+main.light-mode select {
+  background-color: #ffffff !important;
+  border: 2px solid #e5e7eb !important;
+  color: #1f2937 !important;
+  transition: all 0.3s ease !important;
+}
+
+main.light-mode select:hover {
+  border-color: #d1d5db !important;
+}
+
+main.light-mode select:focus {
+  border-color: #6a7cff !important;
+  box-shadow: 0 0 0 3px rgba(106, 124, 255, 0.1) !important;
+  outline: none !important;
+}
+
+main.light-mode select option {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
+/* Light Mode - Email Modal */
+body.light #emailModal {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+#emailModal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#emailModal > div {
+  background-color: #0b0f19;
+}
+
+body.light #emailModal > div {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+body.light #emailModal h2 {
+  color: #1f2937 !important;
+}
+
+body.light #emailModal p {
+  color: #6b7280 !important;
+}
+
+body.light #emailModal label {
+  color: #1f2937 !important;
+}
+
+body.light #emailModal input[type="email"] {
+  background-color: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+  color: #1f2937 !important;
+}
+
+body.light #emailModal input[type="email"]:focus {
+  border-color: #6a7cff !important;
+  outline: none !important;
+}
+
+body.light #emailModal input[type="email"]::placeholder {
+  color: #9ca3af !important;
+}
+
+body.light #emailModal #currentEmail {
+  background-color: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+  color: #9ca3af !important;
+}
+
+body.light #emailModal #emailError {
+  background-color: #fee2e2 !important;
+  border-color: #fecaca !important;
+  color: #dc2626 !important;
+}
+
+body.light #emailModal #emailError span {
+  color: #dc2626 !important;
+}
+
+body.light #emailModal button {
+  transition: all 0.3s ease !important;
+}
+
+body.light #emailModal button:first-of-type {
+  background-color: #f3f4f6 !important;
+  color: #1f2937 !important;
+  border-color: #d1d5db !important;
+}
+
+body.light #emailModal button:first-of-type:hover {
+  background-color: #e5e7eb !important;
+}
+
+/* Email Success Modal Styling */
+#emailSuccessModal {
+  animation: fadeIn 0.3s ease-out;
+}
+
+#successIcon {
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#successCheckmark {
+  animation: checkmarkDraw 0.5s ease-out 0.2s both;
+  stroke-dasharray: 50;
+}
+
+@keyframes checkmarkDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Light Mode - Email Success Modal */
+body.light #emailSuccessModal > div {
+  background-color: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+body.light #emailSuccessModal h2 {
+  color: #1f2937 !important;
+}
+
+body.light #emailSuccessModal p {
+  color: #6b7280 !important;
+}
+
+body.light #emailSuccessModal .bg-white\/5 {
+  background-color: #f3f4f6 !important;
+  border-color: #d1d5db !important;
+}
+
+body.light #emailSuccessModal .bg-white\/5 p:last-child {
+  color: #1f2937 !important;
+}
+
+body.light #emailSuccessModal .bg-white\/5 .text-sm {
+  color: #9ca3af !important;
+}

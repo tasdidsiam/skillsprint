@@ -1,0 +1,137 @@
+    body{font-family:'Inter',sans-serif}
+    .logo-hover{background:linear-gradient(90deg,#6a7cff,#22d3ee);-webkit-background-clip:text;-webkit-text-fill-color:transparent;transition:.6s;background-size:300% 300%}
+    .logo-hover:hover{background:linear-gradient(120deg,#6a7cff,#22d3ee,#f43f5e);background-size:300% 300%;animation:floatGradient 3s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+    @keyframes floatGradient{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    
+    /* Light Mode */
+    body.light {
+      background: #f7f9fc !important;
+      color: #0f172a !important;
+    }
+    
+    body.light header {
+      background-color: rgba(255, 255, 255, 0.75) !important;
+      border-color: #e5e7eb !important;
+    }
+    
+    body.light a {
+      color: #1f2937 !important;
+    }
+    
+    body.light a:hover {
+      color: #111827 !important;
+    }
+    
+    body.light h1, body.light h2, body.light h3, body.light p {
+      color: #1f2937 !important;
+    }
+    
+    body.light .text-\[\#cbd5ff\] {
+      color: #6b7280 !important;
+    }
+    
+    body.light .text-\[\#bfc8ff\] {
+      color: #6b7280 !important;
+    }
+    
+    body.light .bg-white\/5 {
+      background-color: #f3f4f6 !important;
+    }
+    
+    body.light .border-white\/10 {
+      border-color: #e5e7eb !important;
+    }
+    
+    body.light button {
+      color: #1f2937 !important;
+    }
+    
+    body.light button.border.border-white\/20 {
+      border-color: #000000 !important;
+      transition: all 0.3s ease;
+    }
+    
+    body.light button.border.border-white\/20:hover {
+      background-color: #000000 !important;
+      color: #ffffff !important;
+    }
+    
+    body.light .text-cyan-400 {
+      color: #0066cc !important;
+    }
+    
+    body.light .text-\[\#cfd6ff\] {
+      color: #6b7280 !important;
+    }
+    
+    body.light .bg-white\/5 {
+      background-color: #ffffff !important;
+      border: 1px solid #e5e7eb !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    }
+    
+    body.light .bg-white\/5.border.border-white\/10.rounded-3xl {
+      background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%) !important;
+      border: 1px solid #d1d5db !important;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    body.light .bg-white\/5.rounded-xl {
+      background-color: #f3f4f6 !important;
+      border-color: #d1d5db !important;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06) !important;
+    }
+    
+    body.light .bg-white\/5.rounded-xl.p-4 {
+      background-color: #ffffff !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05) !important;
+      border: 1px solid #e5e7eb !important;
+    }
+    
+    body.light .bg-white\/5.rounded-xl.p-4:hover {
+      background-color: #f9fafb !important;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+      transform: translateY(-4px) !important;
+    }
+    
+    body.light .text-2xl.font-bold.bg-gradient-to-r {
+      background: linear-gradient(135deg, #6a7cff 0%, #22d3ee 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
+    }
+    
+    body.light .text-sm.text-\[\#cbd5ff\] {
+      color: #6b7280 !important;
+      font-weight: 500 !important;
+    }
+    
+    body.light h3.text-xl.font-semibold {
+      color: #1f2937 !important;
+    }
+    
+    body.light h2 {
+      color: #1f2937 !important;
+    }
+    
+    body.light .text-\[\#bfc8ff\] {
+      color: #6b7280 !important;
+    }
+    
+    body.light div.bg-white\/5.border.border-white\/10.p-7.rounded-2xl {
+      background-color: #ffffff !important;
+      border: 1px solid #e5e7eb !important;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    }
+    
+    body.light div.bg-white\/5.border.border-white\/10.p-7.rounded-2xl:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+    }
+    
+    body.light div.bg-white\/5.border.border-white\/10.p-7.rounded-2xl h3 {
+      color: #1f2937 !important;
+    }
+    
+    body.light div.bg-white\/5.border.border-white\/10.p-7.rounded-2xl p {
+      color: #6b7280 !important;
+    }
